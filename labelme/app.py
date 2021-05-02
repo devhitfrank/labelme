@@ -31,6 +31,7 @@ from labelme.widgets import LabelListWidgetItem
 from labelme.widgets import ToolBar
 from labelme.widgets import UniqueLabelQListWidget
 from labelme.widgets import ZoomWidget
+from loguru import logger
 
 
 # FIXME
@@ -1418,6 +1419,8 @@ class MainWindow(QtWidgets.QMainWindow):
     def loadFile(self, filename=None):
         """Load the specified file, or the last opened file if None."""
         # changing fileListWidget loads file
+        logger.debug("That's it, beautiful and simple logging!")
+
         if filename in self.imageList and (
             self.fileListWidget.currentRow() != self.imageList.index(filename)
         ):

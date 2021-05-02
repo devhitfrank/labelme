@@ -3,7 +3,6 @@ import logging
 import os
 
 import termcolor
-
 if os.name == "nt":  # Windows
     import colorama
 
